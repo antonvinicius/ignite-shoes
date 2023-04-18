@@ -6,3 +6,7 @@ export function tagUserInfoCreate() {
     'user_email': 'antoniovrdacosta@gmail.com'
   })
 }
+
+export function tagCarUpdate(itemsCount: string) {
+  OneSignal.sendTag('cart_items_count', itemsCount)
+}

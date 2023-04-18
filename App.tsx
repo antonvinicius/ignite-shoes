@@ -20,8 +20,6 @@ OneSignal.setAppId(ONE_SIGNAL_ID);
 export default function App() {
   const [fontsLoaded] = useFonts({ Roboto_400Regular, Roboto_700Bold });
 
-  tagUserInfoCreate()
-
   useEffect(() => {
     const unsubscribe = OneSignal.setNotificationOpenedHandler((openedEvent: OpenedEvent) => {
       const { actionId } = openedEvent.action as any
